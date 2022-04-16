@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="lib" path="C:/Users/user/javalib/hibernate-release-5.6.5.Final/lib/required/antlr-2.7.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/user/javalib/hibernate-release-5.6.5.Final/lib/required/byte-buddy-1.12.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/user/javalib/hibernate-release-5.6.5.Final/lib/required/classmate-1.5.1.jar"/>
@@ -20,5 +21,6 @@
 	<classpathentry kind="lib" path="C:/Users/user/javalib/hibernate-release-5.6.5.Final/lib/required/txw2-2.3.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/user/javalib/postgresql-42.3.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/user/javalib/h2/bin/h2-2.1.210.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

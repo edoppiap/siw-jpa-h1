@@ -13,6 +13,18 @@ import javax.persistence.OneToMany;
 @Entity
 public class Professor {
 	
+	public Professor() {
+		
+	}
+	
+	public Professor(String name, String lastName, LocalDate birthDate, String vatin) {
+		super();
+		this.name = name;
+		this.lastName = lastName;
+		this.birthDate = birthDate;
+		this.vatin = vatin;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;

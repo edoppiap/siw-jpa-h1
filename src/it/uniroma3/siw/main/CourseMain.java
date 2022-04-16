@@ -1,4 +1,4 @@
-package it.unirom3.siw.main;
+package it.uniroma3.siw.main;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

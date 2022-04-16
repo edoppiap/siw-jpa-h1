@@ -156,6 +156,22 @@ public class Student {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	public Company getCompany() {
+		return company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
+	}
+
+	public List<Course> getCourses() {
+		return courses;
+	}
+
+	public void setCourses(List<Course> courses) {
+		this.courses = courses;
+	}
 	
 	
 
