@@ -122,11 +122,12 @@ public class Course {
 	@Override
 	public String toString() {
 		final StringBuilder sb = new StringBuilder();
-		sb.append("Student");
+		sb.append("Course");
 		sb.append("{id=").append(id);
 		sb.append(", name=").append(name);
 		sb.append(", startDate=").append(startDate.toString());
 		sb.append(", monthsDuration=").append(monthsDuration);
+		sb.append("}\n");
 		
 		return sb.toString();
 	}

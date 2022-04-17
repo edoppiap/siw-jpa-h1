@@ -145,6 +145,7 @@ public class Student {
 		sb.append(", email=").append(email);
 		sb.append(", birthDate=").append(birthDate.toString());
 		sb.append(", birthCity=").append(birthCity);
+		sb.append("}\n");
 		
 		return sb.toString();
 	}

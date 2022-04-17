@@ -31,7 +31,7 @@ public class Company {
 	 * La compagnia e l'indirizzo sono entity strettamente collegate quindi e' 
 	 * utile creare un evento a cascata per la gestione nel db
 	 */
-	@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+	@OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REFRESH, CascadeType.REMOVE})
 	private Address address;
 	
 	@Column(length = 9)

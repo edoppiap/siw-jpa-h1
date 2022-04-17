@@ -15,7 +15,7 @@ public class Address {
 	
 	public Address() {}
 	
-	public Address(String via, String civico, Long cap, String comune, String provincia) {
+	public Address(String via, String civico, Integer cap, String comune, String provincia) {
 		super();
 		this.via = via;
 		this.civico = civico;
@@ -31,7 +31,7 @@ public class Address {
 	private String civico;
 	
 	@Column(nullable = false)
-	private Long cap;
+	private Integer cap;
 	
 	private String comune;
 	
@@ -53,11 +53,11 @@ public class Address {
 		this.civico = civico;
 	}
 
-	public Long getCap() {
+	public int getCap() {
 		return cap;
 	}
 
-	public void setCap(Long cap) {
+	public void setCap(Integer cap) {
 		this.cap = cap;
 	}
 
