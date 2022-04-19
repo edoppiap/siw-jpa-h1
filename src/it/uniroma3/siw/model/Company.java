@@ -29,7 +29,7 @@ public class Company {
 	
 	/* 
 	 * Fetch di default: EAGER
-	 * Va bene perche' quando chiediamo i dettagli le compagnie ci 
+	 * Va bene perche' quando chiediamo le compagnie ci 
 	 * interessa conoscere anche l'indirizzo
 	 * 
 	 * La compagnia e l'indirizzo sono entity strettamente collegate quindi e' 
