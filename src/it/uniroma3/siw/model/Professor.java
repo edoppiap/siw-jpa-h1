@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -40,8 +41,13 @@ public class Professor {
 	@Column(nullable = false)
 	private String vatin;
 	
-	@OneToMany(mappedBy = "professor")
-	private List<Course> courses;
+	/*
+	 * Fetch di default: LAZY
+	 * NON va bene perche' quando chiediamo i docenti ci interessa sapere
+	 * anche quali corsi insegnano
+	 */
+	@OneToMany(mappedBy = "professor", fetch = FetchType.EAGER)
+	private List<Course> courses;	//Lista di corsi tenuti dal professore
 
 	public String getName() {
 		return name;

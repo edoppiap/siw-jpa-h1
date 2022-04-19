@@ -88,6 +88,12 @@ public class CourseMain {
 		
 		System.out.print(student2courses.toString());		
 		
+		tx.begin();
+		em.remove(student2);
+		tx.commit();
+		
+		System.out.print(em.createQuery("SELECT s FROM Student s").getResultList().size());
+		
 		em.close();
 		emf.close();
 	}

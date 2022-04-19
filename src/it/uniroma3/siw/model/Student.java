@@ -45,19 +45,23 @@ public class Student {
 	private String birthCity;
 	
 	/* 
-	 * Quando inseriamo un nuovo studente è utile avere un evento a cascata per 
-	 * l'inserimento anche dell'azienda per cui lavora. Non per quando lo cancelliamo 
-	 * perché per la stessa azienda potrebbero lavorare anche altri studenti
+	 * Fetch di default: EAGER
+	 * Va bene perche' quando chiediamo gli studenti vogliamo
+	 * sapere anche per quale azienda lavorano
+	 * 
+	 * Eventi a cascata: quando inseriamo un nuovo studente e' utile avere 
+	 * un evento a cascata per l'azienda per cui lavora
 	 */
-	@ManyToOne(cascade = {CascadeType.PERSIST})
-	private Company company;
+	@ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.REFRESH, CascadeType.REMOVE})
+	private Company company;	//La compagnia per cui lo studente lavora
 	
 	/*
-	 * Quando vogliamo vedere le info sui corsi che uno studente segue probabilmente 
-	 * vorremo anche sapere il docente che tiene ciascun corso
+	 * Fetch di default: LAZY
+	 * NON va bene perche' quando chiediamo gli studenti
+	 * vogliamo sapere anche quali corsi seguono
 	 */
 	@ManyToMany(fetch = FetchType.EAGER)
-	private List<Course> courses;
+	private List<Course> courses;	//La lista di corsi che lo studente segue
 
 	public String getName() {
 		return name;

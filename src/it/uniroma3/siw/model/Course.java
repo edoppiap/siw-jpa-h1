@@ -5,7 +5,6 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -36,14 +35,20 @@ public class Course {
 	private int monthsDuration;
 	
 	/*
-	 * Quando vogliamo vedere le info sugli studenti che seguono un corso 
-	 * probabilmente ci interessa sapere l'azienda per la quale lavorano
+	 * Fetch di default: LAZY 
+	 * Va bene perche' quando chiediamo i corsi, non e' detto che vogliamo
+	 * conoscere anche tutti gli studenti che lo seguono
 	 */
-	@ManyToMany(mappedBy = "courses", fetch = FetchType.EAGER)
-	private List<Student> students;
+	@ManyToMany(mappedBy = "courses")
+	private List<Student> students;		//Lista di studenti frequentanti il corso
 	
+	/*
+	 * Fetch di default: EAGER
+	 * Va bene perche' quando chiediamo i corsi ci interessa sapere anche
+	 * il docente che li tengono
+	 */
 	@ManyToOne
-	private Professor professor;
+	private Professor professor;		//Professore che tiene il corso
 
 	public String getName() {
 		return name;
